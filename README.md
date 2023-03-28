@@ -1,2 +1,2 @@
-# codingTestPreparing
-coding test prepareing
+# codingProblemSolving
+codingProblemSolving
