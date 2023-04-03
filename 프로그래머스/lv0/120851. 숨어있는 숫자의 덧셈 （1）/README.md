@@ -100,10 +100,10 @@
 </pre>
 - 알게된점
     
-    isNaN이라는 코드를 오늘 처음 알게되었다. isNaN은 is Not a Number의 약자로, 뒤에 위치한 어떤 값이 NaN인지 판별할때 쓴다. 
+    isNaN이라는 코드를 오늘 처음 알게되었다. isNaN은 is Not a Number의 약자로, 뒤에 위치한 어떤 값이 NaN인지 판별할때 쓴다. <br>
     
-    예제 코드 :
-<pre>    
+ <pre>      
+    예제 코드 :   
     isNaN(123) => false //123은 숫자기 때문에 false가 출력된다.
     isNaN("0920") => false //문자열이지만 숫자로 취급하여 false가 출력된다.
     isNaN("") => false //빈 문자열은 0으로 취급한다.
