@@ -73,7 +73,7 @@
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
 
-
+<pre>
 풀이 코드 분석 :
    function solution(my_string) {
     var answer = 0; //answer 선언
@@ -104,3 +104,4 @@ function solution(my_string) {
     isNaN("0920") => false //문자열이지만 숫자로 취급하여 false가 출력된다.
     isNaN("") => false //빈 문자열은 0으로 취급한다.
     isNaN("123ABC") => true //문자가 포함되있어 NaN로 취급한다.
+ </pre>
