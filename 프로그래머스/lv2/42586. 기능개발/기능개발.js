@@ -1,19 +1,19 @@
 function solution(progresses, speeds) {
-    let answer = [], results = [], rep = 0;
+    let answer = [], Days = [], rep = 0;
     
     //개발
     progresses.forEach(progress => {
-        results.push(Math.ceil((100-progress)/speeds[rep]));
+        Days.push(Math.ceil((100-progress)/speeds[rep]));
         rep++;
     })
     
     //배포
-    while(results[0] != null){
+    while(Days[0] != null){
         let Cnt = 1;
-        let result = results.shift();
+        let Day = Days.shift();
         while(1){
-            if(result >= results[0]){ 
-                results.shift();
+            if(Day >= Days[0]){ 
+                Days.shift();
                 Cnt++;
             }
             else {
