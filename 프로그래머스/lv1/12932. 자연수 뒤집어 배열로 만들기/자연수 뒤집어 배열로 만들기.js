@@ -1,0 +1,1 @@
+const solution = n => n.toString(10).split('').reverse().map(Number);
