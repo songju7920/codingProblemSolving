@@ -4,26 +4,25 @@ function solution(keymap, targets) {
         let sum = 0;
         target = target.split('');
         
+        //target roop
         for(let i = 0; i < target.length; i++) {
             let min = 101;
+            
+            //keymap 순회하면서 index 찾기
             for(let j = 0; j < keymap.length; j++){
                 let idxOfKey = keymap[j].indexOf(target[i]);
                 if(idxOfKey == -1) continue;
-                min = idxOfKey < min ? idxOfKey : min
+                min = idxOfKey < min ? idxOfKey : min;
             }
             
             if(min == 101) {
                 sum = 0;
-                break
+                break;
+            } else {
+                sum += min + 1;
             }
-            sum += min + 1;
         }
-        
-        if(sum == 0){
-            answer.push(-1);
-        } else {
-            answer.push(sum);
-        }
+        answer.push(sum == 0 ? -1 : sum);
     })
     return answer;
 }
