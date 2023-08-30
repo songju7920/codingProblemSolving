@@ -1,10 +1,8 @@
 function solution(array, commands) {
     let answer = [];
     commands.map((commend) => {
-        let start = commend[0] - 1;
-        let end = commend[1];
-        let target = commend[2] - 1;
-        answer.push(array.slice(start, end).sort((a, b) => a - b)[target])
+        let [start, end, target] = commend;
+        answer.push(array.slice(start - 1, end).sort((a, b) => a - b)[target - 1])
     })
     return answer;
 }
