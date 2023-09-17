@@ -1,6 +1,6 @@
 # [level 2] [1차] 캐시 - 17680 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/17680) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/17680#) 
 
 ### 성능 요약
 
