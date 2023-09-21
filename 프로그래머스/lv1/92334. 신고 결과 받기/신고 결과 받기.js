@@ -2,7 +2,6 @@ function solution(id_list, reports, k) {
     let answer = new Array(id_list.length).fill(0);
     let reportedCnts = new Array(id_list.length).fill(0);
     let bannedList = [];
-    let reportedArrs = [];
     reports = [...new Set(reports)];
     
     reports.map(report => {
