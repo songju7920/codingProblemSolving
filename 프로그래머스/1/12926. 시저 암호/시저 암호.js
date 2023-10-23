@@ -1,25 +1,23 @@
 function solution(s, n) {
-    let answer = [];
-    s = s.split('');
+    let lowers = 'abcdefghijklmnopqrstuvwxyz';
+    let uppers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let answer = '';
     
-    for(let c of s) {
-        if(c == ' ') {
-            answer.push(' ');
-            continue;
+    for(let char of s) {
+        // 공백 처리
+        if(char == ' ') answer += ' ';
+        
+        // 대문자 변환
+        else if(char.toUpperCase() == char) {
+            let idx = uppers.indexOf(char) + n;
+            answer += uppers[idx % 26];
         }
         
-        let Ascii = c.charCodeAt();
-        if(Ascii < 91) {
-            Ascii += n;
-            if(Ascii > 90) answer.push(String.fromCharCode(64 + Ascii % 90));
-            else answer.push(String.fromCharCode(Ascii));
-        }
-        else if(96 < Ascii) {
-            Ascii += n;
-            if(Ascii > 122) answer.push(String.fromCharCode(96 + Ascii % 122));
-            else answer.push(String.fromCharCode(Ascii));
+        // 소문자 변환
+        else {
+            let idx = lowers.indexOf(char) + n;
+            answer += lowers[idx % 26];
         }
     }
-    
-    return answer.join('');
+    return answer;
 }
