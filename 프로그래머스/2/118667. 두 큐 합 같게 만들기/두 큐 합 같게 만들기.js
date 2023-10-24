@@ -2,6 +2,7 @@ function solution(queue1, queue2) {
     let answer = 0;
     let sum1 = queue1.reduce((a, b) => a + b);
     let sum2 = queue2.reduce((a, b) => a + b);
+    let max = queue1.length * 3;
     let start1 = 0;
     let start2 = 0;
     
@@ -20,7 +21,7 @@ function solution(queue1, queue2) {
             start2++;
         }
         
-        if(queue1.length > 1000000 || queue2.length > 1000000) return -1;
+        if(answer > max) return -1;
         answer++;
     }
     
