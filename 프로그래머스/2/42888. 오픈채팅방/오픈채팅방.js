@@ -1,5 +1,4 @@
 function solution(records) {
-    let length = records.length;
     let hashTable = new Map();
     let result = [];
     
